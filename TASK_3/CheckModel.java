@@ -2,7 +2,7 @@ package TASK_3;
 
 import TASK_3.Exceptions.InvalidDateOfBirthFormatException;
 import TASK_3.Exceptions.InvalidFormatNameInputException;
-import TASK_3.Exceptions.InvalidGenderInput;
+import TASK_3.Exceptions.InvalidGenderInputException;
 import TASK_3.Exceptions.InvalidPhoneNumberException;
 
 public class CheckModel {
@@ -67,10 +67,10 @@ public class CheckModel {
     }
 
 
-    public String checkGender(String gender) throws InvalidGenderInput {
+    public String checkGender(String gender) throws InvalidGenderInputException {
 
         if (gender.charAt(0) != 'f' && gender.charAt(0) != 'm' ) {
-            throw new InvalidGenderInput(gender);
+            throw new InvalidGenderInputException(gender);
         }
         return gender;
     }

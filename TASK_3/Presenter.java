@@ -3,7 +3,7 @@ package TASK_3;
 import java.io.IOException;
 import TASK_3.Exceptions.InvalidDateOfBirthFormatException;
 import TASK_3.Exceptions.InvalidFormatNameInputException;
-import TASK_3.Exceptions.InvalidGenderInput;
+import TASK_3.Exceptions.InvalidGenderInputException;
 import TASK_3.Exceptions.InvalidPhoneNumberException;
 
 public class Presenter {
@@ -61,7 +61,7 @@ public class Presenter {
                         process = false;
 
                     } catch (InvalidFormatNameInputException | InvalidPhoneNumberException |
-                             InvalidDateOfBirthFormatException | InvalidGenderInput e) {
+                             InvalidDateOfBirthFormatException | InvalidGenderInputException e) {
                         e.printStackTrace();
                         view.printData(e.getMessage());
                     }
